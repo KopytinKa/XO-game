@@ -24,6 +24,8 @@ class GameViewController: UIViewController {
         }
     }
     
+    var gameMode: GameMode = .twoPlayers
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -69,15 +71,36 @@ class GameViewController: UIViewController {
             return
         }
         
-        if let playerInputState = self.currentState as? PlayerInputGameState {
-            let nextPlayer = playerInputState.player.next
-            self.currentState = PlayerInputGameState(
-                player: nextPlayer,
-                markPrototype: nextPlayer.markViewPrototype,
-                gameViewController: self,
-                gameboard: self.gameboard,
-                gameboardView: self.gameboardView
-            )
+        switch gameMode {
+        case .computer:
+            if (self.currentState as? PlayerInputGameState) != nil {
+                self.currentState = ComputerInputGameState(
+                    gameViewController: self,
+                    gameboard: self.gameboard,
+                    gameboardView: self.gameboardView
+                )
+                self.goToNextState()
+            } else if let computerInputState = self.currentState as? ComputerInputGameState {
+                let nextPlayer = computerInputState.player.next
+                self.currentState = PlayerInputGameState(
+                    player: nextPlayer,
+                    markPrototype: nextPlayer.markViewPrototype,
+                    gameViewController: self,
+                    gameboard: self.gameboard,
+                    gameboardView: self.gameboardView
+                )
+            }
+        case .twoPlayers:
+            if let playerInputState = self.currentState as? PlayerInputGameState {
+                let nextPlayer = playerInputState.player.next
+                self.currentState = PlayerInputGameState(
+                    player: nextPlayer,
+                    markPrototype: nextPlayer.markViewPrototype,
+                    gameViewController: self,
+                    gameboard: self.gameboard,
+                    gameboardView: self.gameboardView
+                )
+            }
         }
     }
 }
