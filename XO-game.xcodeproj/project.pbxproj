@@ -12,6 +12,9 @@
 		8BF373BB26F1FDCF0017A890 /* WinnerGameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF373BA26F1FDCF0017A890 /* WinnerGameState.swift */; };
 		8BF373BD26F1FE780017A890 /* GameMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF373BC26F1FE780017A890 /* GameMode.swift */; };
 		8BF373BF26F2028F0017A890 /* ComputerInputGameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF373BE26F2028F0017A890 /* ComputerInputGameState.swift */; };
+		8BF373C126F242520017A890 /* MultiplePlayerInputGameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF373C026F242520017A890 /* MultiplePlayerInputGameState.swift */; };
+		8BF373C326F242A70017A890 /* ExecutionGameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF373C226F242A70017A890 /* ExecutionGameState.swift */; };
+		8BF373C526F2554D0017A890 /* ExecuteInvoker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF373C426F2554D0017A890 /* ExecuteInvoker.swift */; };
 		DB9970E726E7D5020025C71C /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9970E626E7D5020025C71C /* GameState.swift */; };
 		DB9970EA26E7E8B20025C71C /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9970E926E7E8B20025C71C /* Analytics.swift */; };
 		F874E4712224621100364CAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F874E4702224621100364CAE /* AppDelegate.swift */; };
@@ -36,6 +39,9 @@
 		8BF373BA26F1FDCF0017A890 /* WinnerGameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinnerGameState.swift; sourceTree = "<group>"; };
 		8BF373BC26F1FE780017A890 /* GameMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMode.swift; sourceTree = "<group>"; };
 		8BF373BE26F2028F0017A890 /* ComputerInputGameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComputerInputGameState.swift; sourceTree = "<group>"; };
+		8BF373C026F242520017A890 /* MultiplePlayerInputGameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiplePlayerInputGameState.swift; sourceTree = "<group>"; };
+		8BF373C226F242A70017A890 /* ExecutionGameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecutionGameState.swift; sourceTree = "<group>"; };
+		8BF373C426F2554D0017A890 /* ExecuteInvoker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecuteInvoker.swift; sourceTree = "<group>"; };
 		DB9970E626E7D5020025C71C /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
 		DB9970E926E7E8B20025C71C /* Analytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Analytics.swift; sourceTree = "<group>"; };
 		F874E46D2224621100364CAE /* XO-game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "XO-game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,6 +80,8 @@
 				8BF373B826F1FDC20017A890 /* PlayerInputGameState.swift */,
 				8BF373BA26F1FDCF0017A890 /* WinnerGameState.swift */,
 				8BF373BE26F2028F0017A890 /* ComputerInputGameState.swift */,
+				8BF373C026F242520017A890 /* MultiplePlayerInputGameState.swift */,
+				8BF373C226F242A70017A890 /* ExecutionGameState.swift */,
 			);
 			path = GameStates;
 			sourceTree = "<group>";
@@ -111,6 +119,7 @@
 				F874E4722224621100364CAE /* GameViewController.swift */,
 				8BF373B626F1F9CE0017A890 /* MainMenuViewController.swift */,
 				F874E4F02225DFF700364CAE /* Referee.swift */,
+				8BF373C426F2554D0017A890 /* ExecuteInvoker.swift */,
 				F874E4E62225CB3F00364CAE /* Models */,
 				F874E4E52225CB3100364CAE /* Views */,
 				F874E4772224621300364CAE /* Assets.xcassets */,
@@ -231,7 +240,10 @@
 				F874E4F12225DFF700364CAE /* Referee.swift in Sources */,
 				8BF373B926F1FDC20017A890 /* PlayerInputGameState.swift in Sources */,
 				8BF373BF26F2028F0017A890 /* ComputerInputGameState.swift in Sources */,
+				8BF373C526F2554D0017A890 /* ExecuteInvoker.swift in Sources */,
+				8BF373C126F242520017A890 /* MultiplePlayerInputGameState.swift in Sources */,
 				F874E4F52225E2CD00364CAE /* Gameboard.swift in Sources */,
+				8BF373C326F242A70017A890 /* ExecutionGameState.swift in Sources */,
 				F874E4712224621100364CAE /* AppDelegate.swift in Sources */,
 				8BF373BD26F1FE780017A890 /* GameMode.swift in Sources */,
 				F874E4E22225CABF00364CAE /* OView.swift in Sources */,

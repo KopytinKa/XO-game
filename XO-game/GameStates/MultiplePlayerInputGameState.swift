@@ -1,5 +1,5 @@
 //
-//  PlayerInputGameState.swift
+//  MultiplePlayerInputGameState.swift
 //  XO-game
 //
 //  Created by Кирилл Копытин on 15.09.2021.
@@ -8,8 +8,7 @@
 
 import UIKit
 
-class PlayerInputGameState: GameState {
-    
+class MultiplePlayerInputGameState: GameState {
     var isCompleted: Bool = false
     
     let player: Player
@@ -17,6 +16,7 @@ class PlayerInputGameState: GameState {
     private let gameboard: Gameboard
     private let gameboardView: GameboardView
     private let markPrototype: MarkView
+    private var numberOfMoves: Int = 5
     
     init(player: Player, markPrototype: MarkView, gameViewController: GameViewController, gameboard: Gameboard, gameboardView: GameboardView) {
         self.player = player
@@ -38,10 +38,15 @@ class PlayerInputGameState: GameState {
         guard self.gameboardView.canPlaceMarkView(at: position) else { return }
         
         recordEvent(.turnPlayer(player: self.player, position: position))
+        recordMove(player: self.player, position: position, gameboard: self.gameboard, gameboardView: self.gameboardView)
         
         self.gameboard.setPlayer(self.player, at: position)
         self.gameboardView.placeMarkView(markPrototype.copy(), at: position)
         
-        self.isCompleted = true
+        self.numberOfMoves -= 1
+        
+        if (self.numberOfMoves == 0) {
+            self.isCompleted = true
+        }
     }
 }
